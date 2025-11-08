@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website</title>
+    <link rel="stylesheet" href="/css"><!-- menghubungkan ke file css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="/logo" alt="Logo"></a><!--tautan link menampilkan gambar logo. -->
+       
+        
+        <div>
+            <ul id="navbar"><!-- Membuat navbar dengan css dalam unordered list. -->
+                <li><a  href="/index">Home</a></li><!-- tautan ke halaman home dalam list. -->
+                <li><a href="/shop">Shop</a></li><!-- tautan ke halaman shop dalam list. -->
+                
+                <li><a href="/about">About</a></li><!-- tautan ke halaman about dalam list. -->
+                <li><a class="active" href="/contact">Contact</a></li><!-- tautan ke halaman contact dalam list. -->
+             
+                <li id="lg-bag"><a href="/cart"><i class="fas fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="fas fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-bars"></i>
+        </div>
+    </section>
+
+    <section id="contact-details" class="section-p1">
+        <div class="details"><!-- tampilan info website -->
+            <span>GET IN TOUCH</span>
+            <h2>Visit one of our agency locations or contact us today</h2>
+            <h3>Head Office</h3>
+            <ul>
+                <li>
+                    <i class="far fa-map"></i>
+                    <p>Mikroskil, MH Thamrin</p>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <p>contact@example.com</p>
+                </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <p>+81 12909231</p>
+                </li>
+                <li>
+                    <i class="fas fa-clock"></i>
+                    <p>Monday to Saturday: 9.00am to 16.00pm</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed/v1/place?q=Universitas+Mikroskil,+Building+B,+Jalan+Thamrin,+Pusat+Pasar,+Medan+City,+North+Sumatra,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="form-details">
+        <form onsubmit="return validateForm()"><!-- form memasukkan data -->
+            <span>LEAVE A MESSAGE</span>
+            <h2>We love to hear from you</h2>
+            <input type="text" id="Name" placeholder="Your Name"><!-- kolom teks mengisi nama -->
+            <input type="email" id="Email" placeholder="E-Mail"><!-- kolom teks mengisi email -->
+            <input type="text" id="Subject" placeholder="Subject"><!-- kolom teks mengisi subjek apa -->
+            <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Your Message"></textarea><!-- kolom teks area untuk pesan panjang-->
+            <button class="normal" type="submit">Submit</button><!-- tombol submit -->
+        </form>
+
+        <div class="people">
+            <div>
+                <img src="https://i.ytimg.com/vi/zj_giruywgE/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGEkgRChyMA8=&rs=AOn4CLAdQgwvt0HcaxYLVZlVRk2oCt-3Dw" alt="Goku">
+                <p><span>Son Goku</span> Senior Marketing Manager<br>Phone: +91 29213219311<br>Email: Goku@gmail.com</p>
+            </div>
+            <div>
+                <img src="https://preview.redd.it/the-existence-of-gear-5-means-no-one-on-luffys-side-will-v0-72zgzynhdmva1.jpg?width=640&crop=smart&auto=webp&s=e6aff6782fc6d34be24412c413840706ccfc32ec" alt="Luffy">
+                <p><span>Monkey D Luffy</span> Senior Marketing Manager<br>Phone: +91 0123456789<br>Email: Luffy@gmail.com</p>
+            </div>
+            <div>
+                <img src="https://qph.cf2.quoracdn.net/main-qimg-b2abe99a5197bb34873455cb1227f49b-lq" alt="Naruto">
+                <p><span>Uzumaki Naruto</span> Senior Marketing Manager<br>Phone: +91 0123456789<br>Email: Nanadaime@gmail.com</p>
+            </div>
+            <div>
+                <img src="https://i.pinimg.com/736x/2f/28/77/2f2877ac4cdd37e4e4a7e0b2edfe49d1.jpg" alt="Ichigo">
+                <p><span>Kurosaki Ichigo</span> Senior Marketing Manager<br>Phone: +91 0123456789<br>Email: Bleach@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="news">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get email updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="email">
+            <input type="email" name="email" id="email" placeholder="Your email address">
+            <button class="normal" type="submit">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="/logo" alt="Logo">
+            <h4>Contact Us</h4>
+            <!-- tampilan info contact  -->
+            <p><strong>Address:</strong> Mikroskil, MH Thamrin</p>
+            <p><strong>Phone:</strong> +01 2342 365 / (+91) 01 23445 6789</p>
+            <p><strong>Hour:</strong> 10:00 - 18:00, Mon-Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">     
+                    <!-- tampilan socil media ikon  -->
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4><!-- tampilan kolom dengan tautan link berisi info umum website  -->
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4><!-- tampilan kolom dengan tautan link akun   -->
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="App Store">
+                <img src="img/pay/play.jpg" alt="Google Play">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="Payment Gateways">
+        </div>
+
+        <div class="copyright">
+            <p>Ⓒ 2023, Victory Mart</p>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm() {   // mengambil nilai(nama,email,subject,message) dari input fields
+            var name = document.getElementById("Name").value;
+            var email = document.getElementById("Email").value;
+            var subject = document.getElementById("Subject").value;
+            var message = document.getElementById("Message").value;
+                // cek jika kolom kosong
+            if (name === '' || email === '' || subject === '' || message === '') {
+                alert("Data belum lengkap. Silakan isi semua kolom.");// jika kosong maka muncul pesan
+                
+            }
+        }
+    </script>
+</body>
+</html>

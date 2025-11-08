@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerse Website</title>
+    <link rel="stylesheet" href="/css"><!-- tautan mengambil css dari file -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="logo" alt="Logo"></a><!-- menampilkan gambar jika tidak ada muncul tulisan 'Logo' -->
+        
+        
+        <div>
+            <ul id="navbar"><!-- Membuat navbar dengan css dalam unordered list. -->
+                <li><a  href="/index">Home</a></li><!-- tautan ke halaman home dalam list. -->
+                <li><a href="/shop">Shop</a></li><!-- tautan ke halaman shop dalam list. -->
+                
+                <li><a class="active" href="/about">About</a></li><!-- tautan ke halaman about dalam list. -->
+                <li><a  href="/contact">Contact</a></li><!-- tautan ke halaman contact dalam list. -->
+              
+                <li id="lg-bag"><a href="/cart"><i class="fas fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="fas fa-times"></i></a>
+            </ul>
+        </div>
+    </div>
+        <div id="mobile">
+            <!-- tautan ke halaman "cart.html" dengan ikon keranjang belanja. -->
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a> 
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </div>
+      
+    </section>
+
+    <section id="page-header" class="about-header">
+        <h2>Victory Mart</h2>
+        
+    </section>
+
+    <section id="about-head" class="section-p1">
+        <img src="img/Papan Aboutus.png">
+        <div class="about-content">
+            <h2>Siapakah Kami?</h2>
+            <p id="fakta"></p>
+
+
+           
+
+            <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%" >Revolusi Belanja Modern untuk Generasi Terhubung.</marquee>
+        </div>
+    </section>
+
+    <section id="about-app" class="section-p1">
+        <img src="img/Gambar.jpg" alt="">
+        
+        
+    </section>
+    <!-- tampilan menu dengan css class dibawah bbanner  -->
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="/gambar1">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/gambar2">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/gambar3">
+            <h6>Svae Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/gambar4">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/gambar5">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/gambar6">
+            <h6>F24/7 Support</h6>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1"><!-- menampilkan gambar jika tidak ada muncul tulisan 'Logo' -->
+        <div class="news">
+            <h4>Sing Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offer.</span></p>
+        </div>
+        <div class="email">
+            <input type="text" name="email" id="email" placeholder="Your email address"><!-- memasukkan email  -->
+            <button class="normal">Sign Up</button><!-- tombol sign up  -->
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="/logo" alt="">
+            <h4>Contact Us</h4>
+            <!-- tampilan info contact  -->
+            <p><strong>Address:</strong>Palate Restaurant , Modasa</p>
+            <p><strong>Phone:</strong>+01 2222 365 / (+91) 01 2345 6789</p>
+            <p><strong>Hour:</strong>10:00 - 18:00, Mon-Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4> <!-- tampilan kolom dengan tautan link berisi info umum website  -->
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Term & Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col"><!-- tampilan kolom dengan tautan link akun   -->
+            <h4>My Account</h4>
+            <a href="#">Sing In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>Form App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>Ⓒ 2023, Victory Mart</p>
+        </div>
+    </footer>
+<script>
+ function fetchRandomFact() {
+            // Menggunakan fungsi 'fetch' untuk mengambil data dari URL '/api/random-fact'.
+            fetch('/api/random-fact')
+                .then(response => response.json()) // Mengambil respons HTTP dan menguraikan menjadi objek JSON.
+                .then(data => {
+                    // Mengambil elemen dengan ID 'fakta'.
+                    const randomFact = document.getElementById('fakta');
+                    // Mengganti teks dalam elemen tersebut dengan data yang diterima dari server.
+                    randomFact.textContent = data.fact;
+                })
+                .catch(error => {
+                    // Menangani kesalahan jika terjadi saat mengambil data.
+                    console.error('Error fetching random fact:', error);
+                });
+        }
+
+        fetchRandomFact();
+
+        // Reload a random fact when the page is refreshed
+        window.addEventListener('beforeunload', fetchRandomFact);
+</script>
+    
+</body>
+</html>

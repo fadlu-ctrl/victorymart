@@ -1,0 +1,39 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: victorymart-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: victorymart
+    ports:
+      - "3310:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./victorymart.sql:/docker-entrypoint-initdb.d/victorymart.sql
+    networks:
+      - victory-net
+
+  app:
+    build: .
+    container_name: victorymart-app
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
+    environment:
+      DB_HOST: victorymart-mysql   # ini penting!
+      DB_USER: root
+      DB_PASSWORD: 12345
+      DB_NAME: victorymart
+    networks:
+      - victory-net
+    volumes:
+      - .:/app
+
+networks:
+  victory-net:
+
+volumes:
+  db_data:

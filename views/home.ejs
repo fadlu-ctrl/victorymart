@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victory Mart ~ Ecommerse</title>
+    <link rel="stylesheet" href="/css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="/logo"></a>
+        <!-- Bagian ini menambahkan logo situs web di header. Fungsi baris ini untuk mengarahkan pengguna ke halaman utama situs (href="#") ketika mengklik logo -->
+        
+        
+        
+        
+        <div>
+            <ul id="navbar">
+                User : <%= user.username %>
+                <!-- Bagian ini mendefinisikan sebuah elemen <ul> yang memiliki atribut id="navbar". Elemen <ul> adalah sebuah daftar berurutan yang mengelompokkan beberapa elemen anak. Atribut id digunakan untuk mengidentifikasi elemen ini secara unik dalam dokumen HTML. -->
+                <li><a class="active" href="/">Home</a></li>
+                <!-- menambahkan sebuah elemen <li> yang berisi elemen <a> yang mengarahkan ke halaman utama situs (href="/home"). Elemen <li> digunakan untuk mendefinisikan item dalam daftar -->
+                <li><a href="/shop">Shop</a></li>
+                <!-- mengarahkan ke halaman toko situs (href="/shop") -->
+                <li><a href="/about">About</a></li>
+                <!-- mengarahkan ke halaman tentang situs (href="/about"). Atribut class="active" -->
+                <li><a href="/contact">Contact</a></li>
+                <!-- mengarahkan ke halaman kontak situs (href="/contact"). -->
+             
+                <li id="lg-bag"><a href="/cart"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                 <!-- mengarahkan ke halaman keranjang belanja situs (href="/cart"). Elemen <i> berisi ikon "fas fa-shopping-bag" yang menunjukkan bagian keranjang belanja di navigasi menu. -->
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+                <!-- ikon tutup atau hapus -->
+            </ul>
+        </div>
+        <div id="mobile">
+            <!-- navigasi menu untuk pengguna yang mengakses situs web melalui perangkat seluler atau layar kecil. Atribut id="mobile" digunakan untuk mengidentifikasi elemen ini secara unik dalam dokumen HTML -->
+            <a href="/cart"><i class="fa-solid fa-bag-shopping"></i></a>
+            <!-- mengarahkan ke halaman keranjang belanja situs (href="/cart") -->
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </div>
+    </section>
+    
+    <section id="hero">  
+        <h4>Toko Terpecaya</h4>
+        <h2>Puaskan Keinginan Belanja</h2>
+        <h1>Bersama Victory </h1>
+        <p>Lebih Hemat  & Diskon hingga 70%!</p>
+        <button  onclick="window.location.href='/shop'";>Shop Now</button>
+        <!-- mengarahkan pengguna ke halaman belanja saat tombol diklik -->
+    </section>
+
+    <section id="feature" class="section-p1">
+        <!-- menampilkan daftar fitur atau layanan unggulan yang ditawarkan oleh situs atau bisnis -->
+        <div class="fe-box">
+            <img src="/gambar1">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/gambar2">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/gambar3">
+            <h6>Svae Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/gambar4">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/gambar5">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/gambar6">
+            <h6>F24/7 Support</h6>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <!--  menampilkan produk-produk unggulan atau produk tertentu -->
+        <h2>Featured Products</h2>
+        <p>Summer Collection New Morden Design</p>
+        <div class="pro-container">
+            <!-- mengelompokkan konten terkait dengan produk-produk yang ditampilkan dalam suatu kontainer -->
+            <div class="pro">
+                <!-- mengelompokkan konten terkait dengan satu produk -->
+                <img src=https://5.imimg.com/data5/SELLER/Default/2020/9/WZ/SG/JT/82909252/118592165-161388158908635-284492096698995479-n-1--500x500.jpg alt="">
+                <!-- menampilkan gambar produk. URL gambar ditentukan dalam atribut src, dan alt digunakan untuk memberikan teks alternatif untuk gambar tersebut -->
+                <div class="des">
+                    <!--  mengelompokkan konten terkait dengan deskripsi produk -->
+                    <span>Levi's</span>
+                    <h5>Jeans</h5>
+                    <div class="star">
+                        <!-- mengelompokkan konten terkait dengan peringkat produk -->
+                        <i class="fa-solid fa-star"></i>
+                        <!-- menampilkan bintang  -->
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Rp. 480.000</h4>
+                </div>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                <!-- menambahkan produk ke dalam keranjang belanja. Icon "cart" digunakan untuk menunjukkan tindakan menambahkan produk ke keranjang belanja. Tautan "#" dalam atribut href akan mengarahkan ke halaman keranjang belanja -->
+            </div>
+            <div class="pro">
+                <img src=https://hm-media-prod.s3.amazonaws.com/pub/media/catalog/product/medium/e8a4560d3de124ea2a1c4e164785bc1060b8f473_xxl-1.jpg alt="">
+                <div class="des">
+                    <span>PINGU</span>
+                    <h5>Kids T-Shirt</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Rp. 54.000</h4>
+                </div>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro">
+                <img src=https://shopkiddieswearhouse.com/image/cache/catalog/Upload%20-May%202021%20copy/s7-1399903_lifestyle-875x1000.jpg alt="">
+                <div class="des">
+                    <span>POLO</span>
+                    <h5>Men POLO Shirt</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Rp. 550.000</h4>
+                </div>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro">
+                <img src=https://sc3.locondo.jp/contents/commodity_image/PO/PO2992AU00083_1_l.jpg alt="">
+                <div class="des">
+                    <span>POLO</span>
+                    <h5> Tas Ransel POLO</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Rp. 107.259</h4>
+                </div>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro">
+                <img src=https://hm-media-prod.s3.amazonaws.com/pub/media/catalog/product/medium/5c8b21393d86b8de019c82012f269a9f7ba16100_xxl-1.jpg alt="">
+                <div class="des">
+                    <span>PINGU</span>
+                    <h5>Kids T-Shirts</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Rp. 50.000</h4>
+                </div>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro">
+                <img src=https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ab389ee5-ea3e-48b3-ab07-c25468f899b8/sportswear-older-t-shirt-zw1F2K.png alt="">
+                <div class="des">
+                    <span>NIKE</span>
+                    <h5>JUST DO IT T-Shirts</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Rp. 60.000</h4>
+                </div>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://arch-usa.com/wp-content/uploads/2017/07/FA17_HP_NSW_FASTPACK_DESKTOP.jpg"alt="">
+                <div class="des">
+                    <span>NIKE</span>
+                    <h5>NIKE DUAL SERIES 100% ORIGINAL</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Rp. 2.700.000</h4>
+                </div>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://www.irreverentgent.com/wp-content/uploads/2022/12/Best-Suit-Brands-banner-2-768x489.jpg" alt="">
+                <div class="des">
+                    <span>Levi's</span>
+                    <h5>MEN'S COAT PREMIUM DESIGN</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Rp. 700.000</h4>
+                </div>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner" class="section-m1">
+        <!--  menampilkan papan iklan atau banner -->
+        <h4>Repair Services</h4>
+        <h2>Up to <span> 70% Off </span> - All t-Shirts & Accessories</h2>
+        <button class="normal">Explore More</button>
+        <!-- mengundang pengguna untuk menjelajahi lebih lanjut atau mengeksplorasi informasi atau produk lebih lanjut -->
+    </section>
+
+    <section id="product1" class="section-p1">
+        <!-- menampilkan produk-produk baru yang telah tiba -->
+        <h2>New Arrivals</h2>
+        <p>Summer Collection New Morden Design</p>
+        <div class="pro-container" id="product-container">
+        <!--  mengelompokkan konten terkait dengan produk-produk baru -->
+        </div>
+    </section>
+
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>crazy deals</h4>
+            <h2>buy 1 get 1 free</h2>
+            <span>the best classic dress is on sale at care</span>
+            <button class="white">Learn More</button>
+        </div>
+        <div class="banner-box banner-box2">
+            <h4>spring/summer</h4>
+            <h2>upcomming season</h2>
+            <span>the best classic dress is on sale at care</span>
+            <button class="white">Collection</button>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>SEASONAL SALE</h2>
+            <h3>Winter Collection -50% OFF</h3>
+        </div>
+        <div class="banner-box banner2">
+            <h2>NEW FOOTWEAR COLLECTION</h2>
+            <h3>Spring/Summer 2022</h3>
+        </div>
+        <div class="banner-box banner3">
+            <h2>T-SHIRTS</h2>
+            <h3>New Trendy Prints</h3>
+        </div>
+    </section>
+    
+    <section id="newsletter" class="section-p1 section-m1">
+        <!-- bagian section dengan id "newsletter". Kedua class yang tercantum, "section-p1" dan "section-m1", section ini akan mengisi 100% lebar viewport di layar kecil (m1) dan di atasnya (p1) -->
+        <div class="news">
+            <!-- judul dan teks penjelasan tentang berlangganan newsletter -->
+            <h4>Sing Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offer.</span></p>
+            <!-- memberikan informasi mengenai pembaruan yang akan diterima melalui berlangganan newsletter -->
+        </div>
+        <div class="email">
+            <!-- awal dari div yang berisi formulir berlangganan newsletter -->
+            <input type="text" name="email" id="email" placeholder="Your email address">
+            <!-- input text untuk menginput alamat email pengguna -->
+            <button class="normal">Sign Up</button>
+            <!-- tombol untuk mengirimkan data berlangganan newsletter. -->
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <!-- menampilkan informasi tambahan tentang website dan tautan yang relevan untuk pengguna -->
+        <div class="col">
+            <!-- menampilkan logo, informasi kontak, dan tautan untuk mengikuti media sosial. -->
+            <img class="logo" src="/logo" alt="">
+            <!-- Menampilkan gambar logo website. Gambar ini akan diganti dengan gambar yang sebenarnya setelah diunggah -->
+            <h4>Contact Us</h4>
+            <p><strong>Address:</strong> Ydragsil, isekai</p>
+            <!-- Menampilkan alamat Isekai yang digunakan sebagai contoh -->
+            <p><strong>Phone:</strong> +02 3232 465 / (+81) 02 1235 6709</p>
+            <!-- Menampilkan nomor telepon yang digunakan sebagai contoh -->
+            <p><strong>Hour:</strong> 10:00 - 20:00, Mon-Sat</p>
+             <!-- Menampilkan jam operasional yang digunakan sebagai contoh -->
+            <div class="follow">
+                 <!-- Membuka div yang berisi judul "Follow Us" dan beberapa ikon media sosial -->
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <!-- Membuka div yang berisi ikon-ikon media sosial -->
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <!-- menampilkan informasi mengenai situs web -->
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Term & Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <!-- menampilkan informasi mengenai akun pengguna -->
+            <h4>My Account</h4>
+            <a href="#">Sing In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <!-- menampilkan informasi mengenai penginstalan aplikasi dari App Store atau Google Play -->
+            <h4>Install App</h4>
+            <p>Form App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <!-- Membuka div yang berisi teks hak cipta -->
+            <p>Ⓒ 2023, Victory Mart</p>
+        </div>
+    </footer>
+    <script>
+        // Fungsi untuk mengambil data dari API
+        function fetchData() {
+            fetch('https://fakestoreapi.com/products?limit=12')// permintaan fetch untuk mengambil data produk dari API Fake Store. Data produk dibatasi hingga 12 produk
+                .then(response => response.json())//Setelah data berhasil diambil, mengubahnya menjadi objek JavaScript 
+                .then(data => {//Setelah data berhasil diubah menjadi objek JavaScript, mengambil data itu dan menjalankan fungsi yang telah didefinisikan 
+                    const productContainer = document.getElementById("product-container");//Mendapatkan elemen HTML dengan ID "product-container" untuk menyimpan data produk yang telah diambil
+                    // Loop melalui data produk dari API
+                    data.forEach(product => {
+                        const productDiv = document.createElement("div");//Membuat elemen div baru untuk merepresentasikan produk
+                        productDiv.classList.add("pro");
+    
+                        const productImage = document.createElement("img");//Membuat elemen gambar baru untuk menampilkan gambar produk
+                        productImage.src = product.image;//Mengatur atribut src dari elemen gambar agar menunjuk ke URL gambar produk
+                        productImage.alt = product.title;//Mengatur atribut alt dari elemen gambar agar menunjuk ke nama produk
+    
+                        const productDes = document.createElement("div");//Membuat elemen div baru untuk menampilkan deskripsi produk
+                        productDes.classList.add("des");
+    
+                        const productSpan = document.createElement("span");//Membuat elemen span baru untuk menampilkan nama produk
+                        productSpan.innerText = product.title;
+    
+                        const productH5 = document.createElement("h5");//Membuat elemen h5 baru untuk menampilkan harga produk
+                        productH5.innerText = product.category;//Mengatur isi elemen h5 agar menunjuk ke harga produk
+    
+                        const productStars = document.createElement("div");//Membuat elemen div baru untuk menampilkan rating produk dalam bentuk bintang
+                        productStars.classList.add("star");
+                        for (let i = 0; i < 5; i++) {
+                            const starIcon = document.createElement("i");
+                            starIcon.classList.add("fa-solid", "fa-star");
+                            productStars.appendChild(starIcon);
+                        }
+    
+                        const productPrice = document.createElement("h4");//Membuat elemen h4 baru untuk menampilkan harga produk
+                        productPrice.innerText = `$. ${product.price}`;//Mengatur isi elemen h4 agar menunjuk ke harga produk yang telah diformat menjadi bentuk uang
+    
+                        const productCartLink = document.createElement("a");//Membuat elemen tautan baru untuk menambahkan produk ke keranjang
+                        productCartLink.href = "#";//Mengatur atribut href dari elemen tautan agar menunjuk ke alamat URL saat ini
+                        productCartLink.classList.add("cart");//Menambahkan kelas CSS "cart" ke elemen tautan agar memiliki gaya yang sesuai
+                        const cartIcon = document.createElement("i");//Membuat elemen i baru untuk menampilkan ikon keranjang
+                        cartIcon.classList.add("fa-solid", "fa-cart-shopping");//Menambahkan kelas CSS "fa-solid" dan "fa-cart-shopping" ke elemen i agar memiliki gaya yang sesuai
+                        productCartLink.appendChild(cartIcon);//Menambahkan elemen ikon keranjang ke elemen tautan keranjang produk
+    
+                        productDes.appendChild(productSpan);
+                        productDes.appendChild(productH5);
+                        productDes.appendChild(productStars);
+                        productDes.appendChild(productPrice);
+    
+                        productDiv.appendChild(productImage);//Menambahkan elemen gambar produk ke elemen div produk
+                        productDiv.appendChild(productDes);
+                        productDiv.appendChild(productCartLink);
+    
+                        productContainer.appendChild(productDiv);//Menambahkan elemen div produk ke elemen div "product-container"
+                    });
+                })
+                .catch(error => console.error("Error fetching data:", error));//kode ini menangani situasi di mana operasi fetch mungkin gagal dengan menjalankan blok kode yang mengatasi kesalahan tersebut
+        }
+    
+        fetchData(); // Panggil fungsi fetchData saat halaman dimuat
+    </script>
+    
+    <script src="/script">
+
+    </script>
+</body>
+</html>

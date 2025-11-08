@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecommerce Website</title>
+        <link rel="stylesheet" href="/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f8f8f8;
+            }
+    
+            #header {
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                position: relative;
+            }
+    
+            #header img {
+                max-width: 100px;
+            }
+    
+            #searchIndex {
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+    
+            #navbar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+            }
+    
+            #navbar li {
+                margin-right: 20px;
+            }
+    
+            #navbar a {
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+    
+            #navbar a:hover {
+                color: #3498db;
+            }
+    
+            #page-header {
+                background-color: #eee;
+                padding: 20px;
+                text-align: center;
+            }
+    
+            #container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+                margin: auto;
+                padding: 20px;
+            }
+    
+            #container>div {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                transition: transform 0.3s;
+            }
+    
+            #container img {
+                width: 100%;
+                height: 50%;
+                object-fit: cover;
+            }
+    
+            #container h3 {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100%;
+            }
+    
+            #container p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100%;
+                font-size: 16px;
+                color: #888;
+            }
+    
+            .add-to-cart-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #3498db;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                padding: 10px;
+                border-radius: 0 0 8px 8px;
+                transition: background-color 0.3s;
+            }
+    
+            .add-to-cart-btn:hover {
+                background-color: #2980b9;
+            }
+    
+            .button.is-warning.is-small {
+                white-space: nowrap;
+            }
+        </style>
+</head>
+
+<body>
+   
+    <section id="header">
+        <a href="#"><img src="/logo"></a>
+        <input type="search" placeholder="Search for products and brand" id="searchIndex">
+
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/index">Home</a></li>
+                <li><a class="active" href="/shop">Shop</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+              
+                <li id="lg-bag"><a href="/cart"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </div>
+    </section>
+    <section id="page-header">
+        <h2>Victory Mart</h2>
+        <p>Lebih Hemat dengan Kupon dan Diskon hingga 50%</p>
+    </section>
+    <a href="/create" class="button is-success" style="margin-top: 10px;">Add New</a>
+    <div id="container"></div>
+
+    <script>
+        let mensData = [];
+        let cartLs = [];
+
+        async function fetchProductData() {
+            try {
+                const response = await fetch('/api/products');
+                const data = await response.json();
+                mensData = data;
+                display(mensData);
+            } catch (error) {
+                console.error('Error fetching product data:', error);
+            }
+        }
+
+        function display(mensData) {
+    mensData.forEach(function (elem) {
+        let box = document.createElement("div");
+        box.setAttribute("data-id", elem.id); // Add data-id attribute for identifying the item
+        let image = document.createElement("img");
+        image.setAttribute("src", elem.gambar);
+        let Mname = document.createElement("h3");
+        Mname.innerText = elem.nama;
+        let prc = document.createElement("p");
+        prc.innerText = elem.harga;
+
+        // Create a container for buttons
+        let btnContainer = document.createElement("div");
+        btnContainer.style.display = "flex";
+        btnContainer.style.justifyContent = "space-between";
+
+        // Add to Cart button
+        let btn = document.createElement("button");
+        btn.classList.add("add-to-cart-btn");
+        btn.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>';
+        btn.addEventListener("click", function () {
+            hitme(elem);
+        });
+
+        // Edit button
+        let editLink = document.createElement("a");
+        editLink.href = "/edit/" + elem.id;
+        editLink.classList.add("button", "is-warning", "is-small");
+        editLink.innerText = "Edit";
+
+        // Delete button
+        let deleteBtn = document.createElement("button");
+        deleteBtn.classList.add("button", "is-danger", "is-small");
+        deleteBtn.innerText = "Delete";
+        deleteBtn.addEventListener("click", function () {
+            deleteItem(elem.id);
+        });
+
+        // Append buttons to the container
+        btnContainer.append(btn, editLink, deleteBtn);
+
+        // Append everything to the main box
+        box.append(image, Mname, prc, btnContainer);
+        document.querySelector("#container").append(box);
+    });
+}
+
+
+        
+        //fungsi menambahkan barang yang ingin ditambahkan ke dalam keranjang belanja
+        function hitme(elem) {
+            cartLs.push(elem);
+            localStorage.setItem("cartdata", JSON.stringify(cartLs));
+            alert("Item added");
+        }
+
+        fetchProductData();
+
+        const searchInput = document.querySelector("#searchIndex");
+        const container = document.querySelector("#container");
+        
+        searchInput.addEventListener("input", function () {
+            const searchText = searchInput.value.toLowerCase();
+            const filteredData = mensData.filter(function (elem) {
+                const lowerCaseName = elem.nama.toLowerCase();
+                return lowerCaseName.includes(searchText);
+            });
+
+            container.innerHTML = "";
+            display(filteredData);
+        });
+        function deleteItem(itemId) {
+    fetch(`/api/product/${itemId}`, {
+        method: 'DELETE',
+    })
+    .then(response => {
+        if (response.ok) {
+            const itemToRemove = document.querySelector(`#container div[data-id="${itemId}"]`);
+            if (itemToRemove) {
+                itemToRemove.remove();
+            }
+            alert("Item deleted");
+        } else {
+            throw new Error('Failed to delete item');
+        }
+    })
+    .catch(error => {
+        console.error('Error deleting item:', error);
+    });
+}
+    </script>
+
+</body>
+
+</html>
